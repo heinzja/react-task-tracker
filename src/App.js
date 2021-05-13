@@ -26,7 +26,15 @@ const tasksInitialState = [
 ];
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState(tasksInitialState);
+
+  // Add Task
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1; // generate new id
+    const newTask = { id, ...task }; // create new task
+    setTasks([...tasks, newTask]); // copy current tasks state, add new task to state
+  };
 
   // Delete Task
   const deleteTask = (id) => {
@@ -41,13 +49,20 @@ function App() {
       tasks.map((task) =>
         task.id === id ? { ...task, reminder: !task.reminder } : task
       )
-    )
+    );
   };
 
   return (
     <div className="container">
-      <Header title={APP_TITLE}></Header>
-      <AddTask></AddTask>
+      <Header
+        title={APP_TITLE}
+        onAdd={() => {
+          setShowAddTask(!showAddTask);
+        }}
+        showAdd={showAddTask}
+      ></Header>
+      {showAddTask ? <AddTask onAdd={addTask}></AddTask> : ""}
+
       {tasks.length > 0 ? (
         <Tasks
           tasks={tasks}

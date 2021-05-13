@@ -1,3 +1,7 @@
+# react-task-tracker
+The goal of this project was to gain some basic skills using React. A tutorial was followed on YouTube called [React JS Crash Course 2021
+](https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=1001s)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

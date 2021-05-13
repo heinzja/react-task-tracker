@@ -26,7 +26,7 @@ const tasksInitialState = [
 ];
 
 function App() {
-  const [showAddTask, setShowAddTask] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   const [tasks, setTasks] = useState(tasksInitialState);
 
   // Add Task
@@ -57,11 +57,11 @@ function App() {
       <Header
         title={APP_TITLE}
         onAdd={() => {
-          setShowAddTask(!showAddTask);
+          setShowForm(!showForm);
         }}
-        showAdd={showAddTask}
+        showForm={showForm}
       ></Header>
-      {showAddTask ? <AddTask onAdd={addTask}></AddTask> : ""}
+      {showForm ? <AddTask onAdd={addTask}></AddTask> : ""}
 
       {tasks.length > 0 ? (
         <Tasks

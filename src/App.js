@@ -91,18 +91,18 @@ function App() {
   return (
     <Router>
       <div className="container">
+        <Header
+          title={APP_TITLE}
+          onAdd={() => {
+            setShowForm(!showForm);
+          }}
+          showForm={showForm}
+        />
         <Route
           path="/"
           exact
           render={(props) => (
             <>
-              <Header
-                title={APP_TITLE}
-                onAdd={() => {
-                  setShowForm(!showForm);
-                }}
-                showForm={showForm}
-              />
               {showForm ? <AddTask onAdd={addTask}></AddTask> : ""}
 
               {tasks.length > 0 ? (

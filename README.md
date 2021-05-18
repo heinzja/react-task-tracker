@@ -1,6 +1,19 @@
 # react-task-tracker
-The goal of this project was to gain some basic skills using React. A tutorial was followed on YouTube called [React JS Crash Course 2021
-](https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=1001s)
+The goal of this project was to gain some basic understanding of React and its various features. A tutorial was followed on YouTube called [React JS Crash Course 2021](https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=1001s)
+
+# starting the project
+Once pulled from the code repository you can use the following commands to get the development environment up and running
+```bash
+npm install
+... wait until complete
+npm run start
+```
+
+# back-end
+[json-server](https://www.npmjs.com/package/json-server) used as a mock back-end server
+```bash
+npm run server
+```
 
 # Getting Started with Create React App
 
